@@ -16,7 +16,7 @@ excel_sheet.append(['NO','제목','최저가','최고가','쇼핑몰','링크'])
 
 for index in range(10):
     start_num = start + (index * 100)
-    encText = urllib.parse.quote('아이리스 "PCF-SC15T" -옥션 -11번가 -인터파크')
+    encText = urllib.parse.quote('아이리스 PCF-SC15T')
     naver_open_api = 'https://openapi.naver.com/v1/search/shop.json?query=' + encText + '&display=100&start='+str(start_num)
     header_parms = {"X-Naver-Client-Id":client_id, "X-naver-Client-Secret":client_secret}
     res=requests.get(naver_open_api,headers=header_parms)
